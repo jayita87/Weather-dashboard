@@ -1,98 +1,118 @@
+* {
+    font-family: Quicksand;
+}
+
 body {
+    margin: 5px;
     color: #fff;
-    /* background-image: url("./assets/cactus1.jpeg");  */
     overflow-x: hidden;
     height: 100%;
-    background-image: linear-gradient(#81D4FA, #2196F3);  
+    background-image: linear-gradient(rgb(196, 222, 235), rgb(128, 188, 238));  
     background-repeat: no-repeat;
+
+    /* background-color: rgba(224, 238, 238, 0.651); */
 }
 
-.card0 {
-    width: 94%;
+.name {
+    text-align: center;
+    
 }
 
-.card1 {
-     background-image: linear-gradient(#2196F3, #81D4FA); 
-    padding: 30px 20px 30px 50px;
+.size {
+    width: 22%;
+    margin-bottom: 10px;
 }
 
-.image {
-    width: 300px;
-    height: 300px;
+.control {
+    margin-bottom: 10px;
 }
 
-.large-font {
-    font-size: 70px;
-    font-family: Arial;
+.search {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
 }
 
-.fa-sun-o {
-    font-size: 22px;
+#forecast {
+    border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
+    box-shadow: 0px 4px 8px 0px #85858567;
+    transform: scale(1.005);
+    justify-content: center;
+    /* margin-left: 350px; */
+    /* margin-top: -130px; */
+    width: 75%;
+    /* text-align: center; */
+    position: absolute;
+    right: 0%;
+    top: 20%;    
 }
 
-.card2 {
-    background-color: #607D8B;
-    padding: 0px 0px 40px 40px;
+.forecast1 {
+    padding-bottom: 20px;
+    justify-content: center;
 }
 
-input {
-    background-color: #607D8B;
-    padding: 24px 0px 12px 0px !important;
-    width: 80%;
-    box-sizing: border-box;
-    border: none !important;
-    border-bottom: 1px solid #CFD8DC !important;
-    font-size: 16px !important;
-    color: #fff !important;
+h2{
+    text-decoration: underline ;
+    /* text-align: center; */
 }
 
-input:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border-bottom: 1px solid #fff !important;
-    outline-width: 0;
-    font-weight: 400;
+h3 {
+    text-decoration: underline ;
+    font-weight: bold;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-::placeholder {
-    color: #B0BEC5 !important;
-    opacity: 1;
+.custom{ 
+    border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
+    box-shadow: 0px 4px 8px 0px #85858567;
+    transform: scale(1.005);
+    width: 50%;
+} 
+#Day1{
+    border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
+    box-shadow: 0px 4px 8px 0px #25262767;
+    transform: scale(1.005);
+    margin-right: 10px;
+    
+}
+#Day2{
+    border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
+    box-shadow: 0px 4px 8px 0px #25262767;
+    transform: scale(1.005);
+    margin-right: 10px;
+}
+#Day3{
+    border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
+    box-shadow: 0px 4px 8px 0px #25262767;
+    transform: scale(1.005);
+    margin-right: 10px;
+}
+#Day4{
+    border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
+    box-shadow: 0px 4px 8px 0px #25262767;
+    transform: scale(1.005);
+    margin-right: 10px;
+}
+#Day5{
+    border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
+    box-shadow: 0px 4px 8px 0px #25262767;
+    transform: scale(1.005);
+    
 }
 
-:-ms-input-placeholder {
-    color: #B0BEC5 !important;
-}
-
-::-ms-input-placeholder {
-    color: #B0BEC5 !important;
-}
-
-.fa-search {
-    color: #607D8B;
-    background-color: #E1F5FE;
-    font-size: 20px;
-    padding: 20px;
-    width: 20%;
+.savedCities{
+    border: solid 2px linear-gradient(0deg, #f1f1f1 10%, #757171); 
+    box-shadow: 0px 1px 8px 0px #7982a067;
+    transform: scale(1.005);
+    width: 22%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 2px;
+    text-align: center;
+    justify-content: space-between;
     cursor: pointer;
-}
 
-.light-text {
-    color: #B0BEC5;
-}
-
-.suggestion:hover {
-    color: #fff;
-    cursor: pointer;
-}
-
-.line {
-    height: 1px;
-    background-color: #B0BEC5;
-}
-
-@media screen and (max-width: 500px) {
-    .card1 {
-        padding-left: 26px;
-    }
 }
