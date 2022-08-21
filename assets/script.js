@@ -80,7 +80,6 @@ listSaveCities();
 
 document.addEventListener( 'click', (event) =>
 {
-    // Check that the click was for a crypto selection button
     if (event.target.className === 'savedCities')
     {
         let cityName = event.target.textContent;
@@ -112,7 +111,6 @@ function currentWeather(cityName) {
 </div>`
         });
 }
-
 function fiveDaysForcast() {
     fetch('https://api.openweathermap.org/data/2.5/forecast?q=phoenix&units=imperial&appid=bfb3545c6cc5780043f409b16e39f353')
         .then(function (response) {
@@ -124,8 +122,58 @@ function fiveDaysForcast() {
             day1.appendChild(fivedays);
             day1.innerHTML =
                 `<div>   
-    <p>Humidity: ${data.main.humidity}</p>
-    <p>feels_like: ${data.main.feels_like}f</p>
+                   <p> ${data.list[0].weather[0].description}</p>
+                <p>Date: ${data.list[0].dt}</p>  
+     <p>Temp: ${data.list[0].main.temp}f</p>
+    <p>Feels like: ${data.list[0].main.feels_like}f</p>
+    <p>Humidity: ${data.list[0].main.humidity}%</p>
+    <p>Lows: ${data.list[0].main.temp_min}f</p>
+    <p>Highs: ${data.list[0].main.temp_max}f</p>
+</div>`
+;
+day2.appendChild(fivedays);
+            day2.innerHTML =
+                `<div>   
+                <p>${data.list[1].weather[0].icon,data.list[1].weather[0].description}</p>
+                <p>Date: ${data.list[1].dt}</p>  
+     <p>Temp: ${data.list[1].main.temp}f</p>
+    <p>Feels like: ${data.list[1].main.feels_like}f</p>
+    <p>Humidity: ${data.list[1].main.humidity}%</p>
+    <p>Lows: ${data.list[1].main.temp_min}f</p>
+    <p>Highs: ${data.list[1].main.temp_max}f</p>
+</div>`
+day3.appendChild(fivedays);
+            day3.innerHTML =
+                `<div>  
+                 <p>${data.list[2].weather[0].icon,data.list[2].weather[0].description}</p>
+                <p>Date: ${data.list[2].dt}</p>  
+     <p>Temp: ${data.list[2].main.temp}f</p>
+    <p>Feels like: ${data.list[2].main.feels_like}f</p>
+    <p>Humidity: ${data.list[2].main.humidity}%</p>
+    <p>Lows: ${data.list[2].main.temp_min}f</p>
+    <p>Highs: ${data.list[2].main.temp_max}f</p>
+</div>`
+day4.appendChild(fivedays);
+            day4.innerHTML =
+                `<div>   
+                <p>${data.list[3].weather[0].icon,data.list[3].weather[0].description}</p>
+                <p>Date: ${data.list[3].dt}</p>  
+     <p>Temp: ${data.list[3].main.temp}f</p>
+    <p>Feels like: ${data.list[3].main.feels_like}f</p>
+    <p>Humidity: ${data.list[3].main.humidity}%</p>
+    <p>Lows: ${data.list[3].main.temp_min}f</p>
+    <p>Highs: ${data.list[3].main.temp_max}f</p>
+</div>`
+day5.appendChild(fivedays);
+            day5.innerHTML =
+                `<div> 
+                <p>${data.list[4].weather[0].icon,data.list[4].weather[0].description}</p>
+                <p>Date: ${data.list[4].dt}</p>    
+     <p>Temp: ${data.list[4].main.temp}f</p>
+    <p>Feels like: ${data.list[4].main.feels_like}f</p>
+    <p>Humidity: ${data.list[4].main.humidity}%</p>
+    <p>Lows: ${data.list[4].main.temp_min}f</p>
+    <p>Highs: ${data.list[4].main.temp_max}f</p>
 </div>`
         })
 
