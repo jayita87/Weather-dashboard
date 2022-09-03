@@ -47,11 +47,14 @@ currentDatePlusFiveInUnix = Math.floor(currentDatePlusFive.getTime() / 1000);
 
 searchBtn.addEventListener('click', function () {
     var cityName = textboxEl.value.toUpperCase();
-    var cityArray = localStorage.getItem('cityname');
+    var cityArray = JSON.parse(localStorage.getItem('cityName'));
     currentWeather(cityName);
     fiveDaysForcast(cityName);
     saveCityName(cityName);
-    listCityInView(cityName);                
+    console.log(!cityArray.includes(cityName))
+    if(!cityArray.includes(cityName)){
+        listSavedCity(cityName);
+    }    
 }
 )
 function saveCityName(cityName) {
