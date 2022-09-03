@@ -46,12 +46,13 @@ currentDatePlusFiveInUnix = Math.floor(currentDatePlusFive.getTime() / 1000);
 
 
 searchBtn.addEventListener('click', function () {
-    var cityName = textboxEl.value;
+    var cityName = textboxEl.value.toUpperCase();
     var cityArray = localStorage.getItem('cityname');
     currentWeather(cityName);
     fiveDaysForcast(cityName);
     saveCityName(cityName);
-    listSavedCity(cityName);
+    // listSavedCity(cityName);
+    listSaveCities();
 }
 )
 function saveCityName(cityName) {
@@ -62,8 +63,12 @@ function saveCityName(cityName) {
         ctyArray.push(cityName);
         localStorage.setItem("cityName", JSON.stringify(ctyArray));
     } else {
-        cityArray.push(cityName);
-        localStorage.setItem("cityName", JSON.stringify(cityArray));
+        console.log(cityArray.includes(cityName));
+        if(!cityArray.includes(cityName))
+        {
+            cityArray.push(cityName);
+            localStorage.setItem("cityName", JSON.stringify(cityArray));    
+        }
     }
 }
 
@@ -74,7 +79,7 @@ function listSaveCities() {
 }
 
 function listSavedCity(cityName) {
-    var parentEl = document.getElementById("divTextbox");
+    var parentEl = document.getElementById("divTextbox");    
     var childElement = document.createElement('div');
     childElement.classList.add("savedCities")
     childElement.textContent = cityName;
@@ -106,13 +111,11 @@ function currentWeather(cityName) {
 
             forecastEl.appendChild(child);
             forecastEl.innerHTML =
-                `<div>   
+                `<div> 
+                <p>${window.moment(data.dt * 1000).format('L')}</p>  
      <img src="http://openweathermap.org/img/wn//${data.weather[0].icon}@2x.png" alt="weather icon" class="w-icon"> 
-     <p>${window.moment(data.dt * 1000).format('L')}</p>
-    
      <p> ${data.weather[0].description}</p>
-     <p>Wind speed: ${data.wind.speed}MPH</p>
-     
+     <p>Wind speed: ${data.wind.speed}MPH</p>   
    <p>Temp: ${data.main.temp}F</p>
     <p>Humidity: ${data.main.humidity}%</p>
 </div>`
@@ -130,8 +133,7 @@ function fiveDaysForcast(cityName) {
             day1.appendChild(fivedays);
             data.list.forEach(
                 element => {
-                    if (element.dt == currentDatePlusOneInUnix) {
-                        // day1.innerHTML = addElementsToView(day1, element)
+                    if (element.dt == currentDatePlusOneInUnix) {                        
                         day1.innerHTML =
                             `<div>                           
                             <p>${window.moment(element.dt_txt).format('L')}</p>
@@ -143,8 +145,7 @@ function fiveDaysForcast(cityName) {
                     </div>`;
                     }
 
-                    if (element.dt == currentDatePlusTwoInUnix) {
-                        // day1.innerHTML = addElementsToView(day1, element)
+                    if (element.dt == currentDatePlusTwoInUnix) {                    
                         day2.innerHTML =
                             `<div>                           
                             <p>${window.moment(element.dt_txt).format('L')}</p>
@@ -157,8 +158,7 @@ function fiveDaysForcast(cityName) {
                     </div>`;
                     }
 
-                    if (element.dt == currentDatePlusThreeInUnix) {
-                        // day1.innerHTML = addElementsToView(day1, element)
+                    if (element.dt == currentDatePlusThreeInUnix) {                        
                         day3.innerHTML =
                             `<div>                           
                             <p>${window.moment(element.dt_txt).format('L')}</p>
@@ -171,8 +171,7 @@ function fiveDaysForcast(cityName) {
                     </div>`;
                     }
 
-                    if (element.dt == currentDatePlusFourInUnix) {
-                        // day1.innerHTML = addElementsToView(day1, element)
+                    if (element.dt == currentDatePlusFourInUnix) {                        
                         day4.innerHTML =
                             `<div>                           
                             <p>${window.moment(element.dt_txt).format('L')}</p>
@@ -186,8 +185,7 @@ function fiveDaysForcast(cityName) {
                     }
 
 
-                    if (element.dt == currentDatePlusFiveInUnix) {
-                        // day1.innerHTML = addElementsToView(day1, element)
+                    if (element.dt == currentDatePlusFiveInUnix) {                        
                         day5.innerHTML =
                             `<div>                           
                             <p>${window.moment(element.dt_txt).format('L')}</p>
