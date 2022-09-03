@@ -6,12 +6,10 @@ body {
     margin: 5px;
     color: #fff;
     overflow-x: hidden;
-    height: 100%;
-    /* background-image: linear-gradient(rgb(196, 222, 235), rgb(128, 188, 238));   */
+    height: 150vh;
     background-repeat: no-repeat;
     font-weight: bold;
-    background-image: linear-gradient(rgb(196, 222, 235), rgb(128, 188, 238)); 
-    /* background-color: rgba(224, 238, 238, 0.651); */
+    background-image: linear-gradient(rgb(196, 222, 235), rgb(145, 192, 231));     
 }
 
 .name {
@@ -35,17 +33,15 @@ body {
 }
 
 #forecast {
+    background-color: rgb(109, 158, 221);
     border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
     box-shadow: 0px 4px 8px 0px #85858567;
     transform: scale(1.005);
     justify-content: center;
-    /* margin-left: 350px; */
-    /* margin-top: -130px; */
-    width: 75%;
-    /* text-align: center; */
+    width: 65%;
     position: absolute;
-    right: 0%;
-    top: 20%;    
+    right: 10%;
+    top: 18%;    
 }
 
 .forecast1 {
@@ -53,69 +49,64 @@ body {
     justify-content: center;
 }
 
-h2{
-    text-decoration: underline ;
-    /* text-align: center; */
-    font-weight: bolder;
-}
-
 h3 {
     text-decoration: underline ;
     font-weight: bold;
-    margin-top: 20px;
+    font-size: 22px;
+    margin-top: 24px;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    margin-top: 10px;
 
 }
 
 .custom{ 
+    background-color: rgb(109, 158, 221);    
     border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
-    box-shadow: 0px 4px 8px 0px #55535367;
+    box-shadow: 0px 4px 8px 0px #f1eded67;
     transform: scale(1.005);
-    width: 50%;
+    width: 65%;
     font-weight: bold;
-
-    
+    position: absolute;
+    right: 10%;
+    top: 85%; 
     
 } 
 #Day1{
-    border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
-    box-shadow: 0px 4px 8px 0px #25262767;
+    box-shadow: 0px 4px 8px 0px #25262767;        
     transform: scale(1.005);
     margin-right: 10px;
     
 }
 #Day2{
-    border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
     box-shadow: 0px 4px 8px 0px #25262767;
     transform: scale(1.005);
     margin-right: 10px;
+    
 }
 #Day3{
-    border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
     box-shadow: 0px 4px 8px 0px #25262767;
     transform: scale(1.005);
     margin-right: 10px;
 }
-#Day4{
-    border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
+#Day4{    
     box-shadow: 0px 4px 8px 0px #25262767;
     transform: scale(1.005);
     margin-right: 10px;
 }
-#Day5{
-    border: solid 2px linear-gradient(0deg, #f1f1f1 0%, #ececec);
+#Day5{    
     box-shadow: 0px 4px 8px 0px #25262767;
     transform: scale(1.005);
     margin-right: 10px;
 }
 
 .savedCities{
-    border: solid 2px linear-gradient(0deg, #f1f1f1 10%, #757171); 
-    box-shadow: 0px 1px 8px 0px #7982a067;
+    background-color: #b4bdbe;
+    border: solid 2px linear-gradient(0deg, #505152fd 10%, #e9e5e5); 
+    box-shadow: 0px 4px 8px 0px #292a2c67;
     transform: scale(1.005);
     width: 22%;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
     padding-top: 5px;
     margin-bottom: 2px;
     text-align: center;
