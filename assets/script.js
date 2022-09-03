@@ -50,8 +50,8 @@ searchBtn.addEventListener('click', function () {
     var cityArray = localStorage.getItem('cityname');
     currentWeather(cityName);
     fiveDaysForcast(cityName);
-    saveCityName(cityName);    
-    listCityInView(cityName);    
+    saveCityName(cityName);
+    listCityInView(cityName);                
 }
 )
 function saveCityName(cityName) {
