@@ -50,9 +50,8 @@ searchBtn.addEventListener('click', function () {
     var cityArray = localStorage.getItem('cityname');
     currentWeather(cityName);
     fiveDaysForcast(cityName);
-    saveCityName(cityName);
-    // listSavedCity(cityName);
-    listSaveCities();
+    saveCityName(cityName);    
+    listCityInView(cityName);    
 }
 )
 function saveCityName(cityName) {
@@ -78,12 +77,18 @@ function listSaveCities() {
     cityArray.forEach(listSavedCity);  
 }
 
-function listSavedCity(cityName) {
-    var parentEl = document.getElementById("divTextbox");    
-    var childElement = document.createElement('div');
-    childElement.classList.add("savedCities")
-    childElement.textContent = cityName;
-    parentEl.appendChild(childElement);
+function listSavedCity(cityName) {    
+        var parentEl = document.getElementById("divTextbox");    
+        var childElement = document.createElement('div');
+        childElement.classList.add("savedCities")
+        childElement.textContent = cityName;
+        parentEl.appendChild(childElement);    
+}
+
+function listCityInView(cityName){
+    if(!cityArray.includes(cityName)){
+        listSavedCity(cityName);
+    }
 }
 
 listSaveCities();
