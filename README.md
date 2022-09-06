@@ -1,7 +1,7 @@
 # Weather-dashboard
 ## Description
 
-The project is about learning how to invoke third party API's and use the data fetched from the third party API's and use that data to create a dashboard. In this dashboard I have called open weather third party API to get current and  5 day forecast data and have used that data to create weather dashboard. This app uses moment.js to use date and time.
+The project is about learning how to invoke third party API's and use the data fetched from the third party API's and use that data to create a dashboard. In this dashboard I have called open weather third party API to get current and  5 day forecast data and have used that data to create weather dashboard. This app uses moment.js to use date and time. I used localStorage to store any persistent data.
 
 Third Party API used in this project - https://openweathermap.org/api/one-call-api
 
@@ -24,9 +24,10 @@ The project is to get current weater and also to get 5 days forecast. <br>
 
 ## License 
 This project is license under MIT
+![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Tests
-There are no tests for this application.
+There are no tests needed for this application.
 
 ## Deployed
 Code deployed at https://jayita87.github.io/Weather-dashboard/
