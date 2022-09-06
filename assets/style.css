@@ -43,22 +43,29 @@ body {
     right: 10%;
     top: 18%;    
 }
-
+h1{
+    text-decoration: underline ;
+    font-weight: bold;
+    font-size: 22px;
+    justify-content: center;
+}
 .forecast1 {
     padding-bottom: 20px;
     justify-content: center;
 }
 
-h3 {
+/* h3 {
     text-decoration: underline ;
     font-weight: bold;
     font-size: 22px;
-    margin-top: 24px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    /* margin-top: 24px; */
+    /* padding-bottom: 10px; */
+    /* margin-bottom: 10px; */
+    /* margin-top: 10px; */
+    /* top:200%; */
+    /* height: 100vh; */
 
-}
+/* }  */
 
 .custom{ 
     background-color: rgb(109, 158, 221);    
@@ -97,7 +104,7 @@ h3 {
 #Day5{    
     box-shadow: 0px 4px 8px 0px #25262767;
     transform: scale(1.005);
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 .savedCities{
@@ -113,4 +120,11 @@ h3 {
     justify-content: space-between;
     cursor: pointer;
     font-weight: bold;
+}
+.headings{
+    text-decoration: underline ;
+    font-weight: bold;
+    font-size: 22px;
+    padding-bottom: 0px; 
+    
 }

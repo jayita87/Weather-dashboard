@@ -120,6 +120,8 @@ function currentWeather(cityName) {
             forecastEl.appendChild(child);
             forecastEl.innerHTML =
                 `<div> 
+                <h1>TODAY's FORECAST:</h1>
+                <p>${cityName}</p>
                 <p>${window.moment(data.dt * 1000).format('L')}</p>  
      <img src="http://openweathermap.org/img/wn//${data.weather[0].icon}@2x.png" alt="weather icon" class="w-icon"> 
      <p> ${data.weather[0].description}</p>
