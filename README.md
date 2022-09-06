@@ -29,7 +29,7 @@ This project is license under MIT
 There are no tests for this application.
 
 ## Deployed
-Code deployed at https://jayita87.github.io/work-day-scheduler/
+Code deployed at https://jayita87.github.io/Weather-dashboard/
 
 ## Contact
 If you have any questions about this projects, please contact me directly at jayita.chowdhury.1987@gmail.com. You can view more of my projects at https://github.com/jayita87.
